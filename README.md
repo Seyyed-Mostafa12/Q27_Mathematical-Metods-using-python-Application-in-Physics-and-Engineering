@@ -1,26 +1,51 @@
-# Solve question 27 of Mathematical Metods using python Application in Physics and Engineering
+# Solving Maxwell-Boltzmann Distribution Problem with Python
 
-<div style="font-family: Dibaj; text-align: justify; font-size: 16px;">
+**Project Overview:**
 
-27. <strong>Experimental data for Maxwell-Boltzmann distribution</strong> – The data shown in the graph below were obtained during an experimental study of the distribution of speeds from a Maxwell Boltzmann distribution. The data was obtained using a velocity selector and is contained in the file mb.txt. For a detailed description of the experiment, the reader can consult the book Concepts in Thermal Physics by S.Blundell and K. Blundell (Oxford, 2006). The MB distribution is given by:
+This project focuses on solving Question 27 from the book "Mathematical Methods using Python: Applications in Physics and Engineering" by Vasilis Pagonis and Christopher W. Kulp.  The problem involves analyzing experimental data for the Maxwell-Boltzmann distribution of molecular speeds.
 
-<img width="429" alt="1" src="https://github.com/user-attachments/assets/82219286-20a2-4c90-b157-8d333f492792" />
+**Problem Statement:**
 
-a. Show that it is not possible to fit this data with the Maxwell-Boltzmann distribution
+The goal is to demonstrate that the provided experimental data, related to the speed distribution of molecules, cannot be accurately fitted using a Maxwell-Boltzmann distribution function of the form:
 
-<img width="252" alt="2" src="https://github.com/user-attachments/assets/d3d28ac8-4e55-4aad-84ee-fdb7ae18217d" />
+$$ f(v) = a v^2 \exp(-b v^2) $$
 
-with a, b are constants, and that the best fit curve is too broad.
-
-<div style="font-family: Dibaj; text-align: justify; font-size: 16px;">
-
-b. Show that this data shown in Figure 13.18 can be fitted successfully using a modified Maxwell-Boltzmann distribution of the type:
-
-<img width="270" alt="3" src="https://github.com/user-attachments/assets/78fc0c35-a5dc-4d55-893f-5411cfe21afa" />
+where *a* and *b* are constants.  The problem statement also suggests that the best fit curve obtained using this function will be too broad compared to the experimental data.
 
 ![image 48](https://github.com/user-attachments/assets/22924b45-9ba1-451a-a388-aceba3b09ab0)
 
-where a′, b′ are constants.
-</div>
+**Implementation:**
 
-</div>
+This repository contains a Jupyter Notebook (`27.ipynb`) that implements the solution using Python.  Key libraries used include:
+
+*   **NumPy:** For numerical computations and array handling.
+*   **Matplotlib:** For plotting and data visualization.
+*   **SciPy (optimize.curve\_fit):** For curve fitting to attempt to fit the Maxwell-Boltzmann function to the experimental data.
+*   **Pandas:** For data manipulation and reading the experimental data from the `mb.txt` file (assumed to be provided with the book or problem description).
+
+**Approach:**
+
+The Jupyter Notebook likely includes the following steps:
+
+1.  **Data Loading:** Reading the experimental data from the `mb.txt` file.
+2.  **Maxwell-Boltzmann Function Definition:** Defining the function  $f(v) = a v^2 \exp(-b v^2)$ in Python.
+3.  **Curve Fitting:** Using `scipy.optimize.curve_fit` to find the best-fit parameters (*a* and *b*) for the Maxwell-Boltzmann function to the experimental data.
+4.  **Visualization:** Plotting the experimental data and the best-fit Maxwell-Boltzmann curve on the same graph to visually compare them.
+5.  **Analysis and Conclusion:**  Analyzing the plot and the fit results to demonstrate that the Maxwell-Boltzmann function of the given form is not a suitable fit for the experimental data, and that the best-fit curve is indeed too broad.
+
+**Book Information:**
+
+*   **Book Title:** Mathematical Methods using Python: Applications in Physics and Engineering
+*   **Authors:** Vasilis Pagonis, Christopher W. Kulp
+*   **Publisher:** CRC Press
+
+**Usage:**
+
+1.  Clone this repository.
+2.  Ensure you have the required Python libraries installed (NumPy, Matplotlib, SciPy, Pandas). You can install them using pip: `pip install numpy matplotlib scipy pandas`
+3.  Open and run the Jupyter Notebook `27.ipynb`.
+4.  Review the code, plots, and analysis in the notebook to understand the solution.
+
+**Target:**
+
+This project serves as a practical example of applying Python and numerical methods to solve a physics problem from a textbook. It demonstrates how to use curve fitting to analyze experimental data and compare it with a theoretical model.
